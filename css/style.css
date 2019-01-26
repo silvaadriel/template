@@ -32,8 +32,8 @@ ul {
 }
 
 .subtitulo {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5em;
+  line-height: 1.875em;
   font-weight: bold;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -51,19 +51,16 @@ ul {
 }
 
 .btn {
-		border-radius: 8px;
-    border: 0;
-    background: rgba(44, 141, 158, 0.493);
-		cursor: pointer;
-    font-weight: bold;
-    color: #636363;
-    font-size: 1em;
-    text-transform: uppercase;
-		height: 2.75em;
-		line-height: 2.75em;
-		min-width: 9.25em;
-    padding: 1em 1.5em;
-    transition: all .3s ease;
+  border-radius: 8px;
+  border: 0;
+  background: rgba(44, 141, 158, 0.493);
+  cursor: pointer;
+  font-weight: bold;
+  color: #636363;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  transition: all .3s ease;
 }
 
 .btn:hover {
@@ -76,11 +73,21 @@ ul {
   padding: 2em 0 3em 0em;
 }
 
+@media screen and (max-width: 480px) {
+  .subtitulo {
+    font-size: 1.2em;
+  }
+  .btn {
+    font-size: .875em;
+    padding: .875em 1em;
+  }
+}
+
 /* Header */
 
 #header {
   width: 100%;
-  height: 640px;;
+  height: 40.7em;
   margin-bottom: -100px;
   background: url("../images/patrick-tomasso-1272187-unsplash.jpg") no-repeat center;
   background-size: cover;
@@ -124,15 +131,33 @@ ul {
   font-style: normal;
 }
 
+@media screen and (max-width: 480px) {
+  #header {
+    margin-bottom: 0;
+    padding: 4em 2em 1em 2em;
+  }
+
+  .quote {
+    font-size: 1em;
+  }
+}
+
 /* Wrapper */
 
 #wrapper {
   width: 74em;
   max-width: calc(100% - 4em);
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 0.25em;
   background-color: #fff;
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .1);
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper {
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
 
 /* Nav */
@@ -162,6 +187,26 @@ ul {
   color: #2C8D9E;
 }
 
+@media screen and (max-width: 480px) {
+  #nav {
+    position: fixed;
+    bottom: -1px;
+    max-width: 100%;
+    padding: 1.5em 0;
+    z-index: 20;
+    background: #fff;
+    box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, .2);
+  }
+  #nav ul li {
+    margin: 0 .1rem;
+    padding: 0;
+  }
+  #nav ul li a {
+    font-size: 1em;
+    padding: .875em .5em;
+  }
+}
+
 /* Main */
 
 main {
@@ -174,6 +219,12 @@ main {
   padding: 4em 2em 2em 2em;
   margin: 0 auto;
   border-top: 1px #ccc solid;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 2em 0 1em 0;
+  }
 }
 
 .container:first-child, footer.container {
@@ -231,6 +282,22 @@ main {
   padding: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .features {
+    display: block;
+  }
+
+  .features li {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 3.5em;
+  }
+
+  #destaque {
+    padding-top: 4em;
+  }
+} 
+
 /* Portfolio */
 
 .slider {
@@ -269,9 +336,9 @@ main {
   opacity: .8;
   cursor: pointer;
   display: block;
-  height: 40px;
+  height: 2.5em;
   position: absolute;
-  width: 40px;
+  width: 2.5em;
   z-index: 10;
   transition: all .3s ease;
 }
@@ -343,6 +410,56 @@ main {
   z-index: 10;
 } 
 
+@media screen and (max-width: 480px) {
+  .slider {
+    display: block;
+    height: 10em;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .slider label {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .slider li:nth-child(1) label {
+    left: 1em;
+  }
+  
+  .slider li:nth-child(2) label {
+    left: 3.5em;
+  }
+  
+  .slider li:nth-child(3) label {
+    left: 6em;
+  } 
+  
+  .slider li:nth-child(4) label {
+    left: 8.5em;
+  } 
+  
+  .slider li:nth-child(5) label {
+    left: 11em;
+  } 
+  
+  .slider li:nth-child(6) label {
+    left: 13.5em;
+  } 
+  
+  .slider li:nth-child(7) label {
+    left: 16em;
+  } 
+
+  .slider li input:checked ~ label {
+    width: 1.875em;
+    height: 1.875em;
+  }
+  
+}
+
 /* Sobre */
 
 #sobre img {
@@ -378,6 +495,28 @@ main {
 #sobre .call {
   text-align: left;
   padding-top: 0;
+}
+
+@media screen and (max-width: 480px) {
+  #sobre .sobre {
+    display: block;
+  }
+
+  #sobre img {
+    width: 12em;
+    height: 12em;
+    margin: 1em auto;
+  }
+
+  #sobre p {
+    font-size: .875em;
+    padding-top: 1em;
+  }
+
+  #sobre .call {
+    text-align: center;
+    padding: 2em 0;
+  }
 }
 
 /* Contato */
