@@ -1,0 +1,383 @@
+/*  Geral  */
+*, *:before, *:after {
+  box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body, p, ul, li, h2, h1, a {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.subtitulo {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.subtitulo:after {
+  content: " ";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #636363;
+  margin: 10px auto;
+}
+
+.btn {
+		border-radius: 8px;
+    border: 0;
+    background: rgba(44, 141, 158, 0.493);
+		cursor: pointer;
+    font-weight: bold;
+    color: #636363;
+    font-size: 1em;
+    text-transform: uppercase;
+		height: 2.75em;
+		line-height: 2.75em;
+		min-width: 9.25em;
+    padding: 1em 1.5em;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+  background: #2C8D9E;
+  color: #fff; 
+}
+
+.call {
+  text-align: center;
+  padding: 2em 0 3em 0em;
+}
+
+/* Header */
+
+#header {
+  width: 100%;
+  height: 640px;;
+  margin-bottom: -100px;
+  background: url("../images/patrick-tomasso-1272187-unsplash.jpg") no-repeat center;
+  background-size: cover;
+  padding: 5em 5em 1em 5em;
+  text-align: center;
+}
+
+#logo h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 4em;
+  padding-top: 100px;
+  margin-bottom: 40px;
+}
+
+.quote {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
+.quote p:before, .quote p:after {
+  content: " ";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fff;
+  margin: 14px auto 10px auto;
+}
+
+.quote cite {
+  font-size: .875em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-style: normal;
+}
+
+/* Wrapper */
+
+#wrapper {
+  width: 74em;
+  max-width: calc(100% - 4em);
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .1);
+}
+
+/* Nav */
+
+#nav {
+  position: absolute;
+  width: 74em;
+  max-width: calc(100% - 4em);
+  padding: 2em;
+  text-align: center;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin: 0 1.875rem;
+  padding: 0;
+}
+
+#nav ul li a {
+  color: #636363;
+  font-size: 1.2em;
+  padding: 1em;
+  transition: all .5s ease;
+}
+
+#nav ul li a:hover {
+  color: #2C8D9E;
+}
+
+/* Main */
+
+main {
+  color: #636363;
+  border-radius: 0.25em;
+}
+
+.container {
+  max-width: calc(100% - 4em);
+  padding: 4em 2em 2em 2em;
+  margin: 0 auto;
+  border-top: 1px #ccc solid;
+}
+
+.container:first-child, footer.container {
+  border-top: none;
+}
+
+#destaque {
+  padding-top: 8em;
+}
+
+#destaque li {
+  margin: 0 .1em;
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+  border-radius: 0.25em;
+  transition: all .3s ease;
+}
+
+#destaque li img {
+  border-radius: 0.25em;
+}
+
+#destaque li h3:after {
+  content: " ";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #636363;
+  margin: 8px auto;
+}
+
+#destaque li:hover {
+  background: rgba(44, 141, 158, 0.493);
+  color: #fff;
+}
+
+#destaque li:hover h3:after {
+  background: #fff;
+}
+
+/* Features */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.features li {
+  width: calc(33% - 2em);
+  margin-left: 2em;
+  margin-top: 3em;
+  padding: 0;
+}
+
+/* Portfolio */
+
+.slider {
+  display: block;
+  height: 30.5em;
+  max-height: calc(100% - 4em);
+  width: 54em;
+  max-width: calc(100% - 4em);
+  margin: auto;
+  margin-top: 60px;
+  position: relative;
+}
+  
+ .slider li {
+  list-style: none;
+  position: absolute;
+}
+
+ .slider img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  border-radius: 0.25em;
+} 
+
+.slider input {
+  display: none;
+}
+
+.slider label {
+  background-color: #000;
+  bottom: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, .5);
+  opacity: .8;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  position: absolute;
+  width: 40px;
+  z-index: 10;
+  transition: all .3s ease;
+}
+
+.slider li:nth-child(1) label {
+  background: url(../images/daniel-chen-108577-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 10px;
+  top: -30px;
+}
+
+.slider li:nth-child(2) label {
+  background: url(../images/floriane-vita-88722-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 60px;
+  top: -30px;
+}
+
+.slider li:nth-child(3) label {
+  background: url(../images/freeman-zhou-1252466-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 110px;
+  top: -30px;
+} 
+
+.slider li:nth-child(4) label {
+  background: url(../images/joel-filipe-171928-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 160px;
+  top: -30px;
+} 
+
+.slider li:nth-child(5) label {
+  background: url(../images/lance-anderson-213491-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 210px;
+  top: -30px;
+} 
+
+.slider li:nth-child(6) label {
+  background: url(../images/patrick-tomasso-1272187-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 260px;
+  top: -30px;
+} 
+
+.slider li:nth-child(7) label {
+  background: url(../images/sean-pollock-203658-unsplash-thumb.jpg) no-repeat center;
+  background-size: cover; 
+  left: 310px;
+  top: -30px;
+} 
+
+.slider img {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.slider li input:checked ~ label {
+  opacity: 1;
+  width: 42px;
+  height: 42px;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+} 
+
+/* Sobre */
+
+#sobre img {
+  width: 20em;
+  max-width: calc(100% - 4em);
+  height: 20em;
+  max-height: calc(100% - 4em);
+  margin-left: 4em;
+  padding: 0.65em;
+  border-radius: 100%;
+  border: solid 1px;
+}
+
+#sobre p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  padding-top: 4em;
+}
+
+#sobre .sobre {
+  display: flex;
+}
+
+#sobre .subtitulo {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+#sobre .subtitulo:after {
+  margin: 10px 0;
+}
+
+#sobre .call {
+  text-align: left;
+  padding-top: 0;
+}
+
+/* Contato */
